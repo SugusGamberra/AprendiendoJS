@@ -37,3 +37,20 @@ Y listo!!
 Ahora irás viendo en esta carpetita los cursos desde el 1 hasta lo que dure :3
 
 Un besoteee!!
+
+## 🗺️ Hoja de Ruta del curso 
+
+El curso está dividido en módulos. Iremos paso a paso, con explicaciones sencillas y **ejemplos de código funcionales** por cada lección que demos.
+
+| Módulo | Tema Principal | Archivo / Carpeta | Estado |
+| :--- | :--- | :--- | :--- |
+| **01** | Variables y concatenar | [VARIABLES](./1.%20Variables/README.md) | ✅ Listo |
+| **02** | Operadores matemáticos | [OPERADORES](./2.%20Operadores%20aritméticos/README.md) | ✅ Listo |
+| **03** | Estructuras de control de flujo | - | ⏳ Pendiente |
+| **04** | Modulación | - | ⏳ Pendiente |
+| **05** | Arrays y listas | - | ⏳ Pendiente |
+| **06** | Diccionarios | - | ⏳ Pendiente |
+| **07** | Implementación | - | ⏳ Pendiente |
+| **08** | Manejo de excepciones | - | ⏳ Pendiente | 
+| **09** | Depuración | - | ⏳ Pendiente |
+| **10** | Buenas prácticas | - | ⏳ Pendiente |
