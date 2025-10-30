@@ -89,6 +89,38 @@ Una vez creado, doble clic, y vas haciendo los ejercicios. Como te pido mostrarl
 
 Ahora sí, para probarlo escribe en la terminal "node tuArchivo.js" y le das a enter, y ya verás en consola lo que hayas querido mostrar en el console.log ;3
 
+# TIPOS DE DATOS
+
+## Primitivos
+
+Son los que hemos visto (string, boolean, null...), los tipos de datos más simples!
+
+## No primitivos
+
+Permiten agrupar datos relacionados bajo un mismo nombre, ejemplo:
+
+const miEx = {
+    nombre: "Mario Borja",
+    edad: "Muy viejo ya para andar haciendo el gilipollas",
+    mascotas: true,
+    nombreMascotas: "Mario Borja ya que es un cerdo",
+    hobbies: ["Tocar los cojones", "Hacerse cuentas falsas para molestar", "No devolverme mi puñetero Alienware x51"]
+};
+
+// Accedemos a los datos de la siguiente forma:
+
+console.log(miEx.nombre);
+
+# TYPEOFF
+
+Si queremos saber qué tipo de datos se almacenan en una variable, lo cual viene dpm cuando depuras, lo hacemos así:
+
+let edad = 25;
+
+console.log(typeoff edad);
+
+Ahí te mostrará que ese es number, o el que sea de la variable que selecciones!
+
 # Ejercicios
 
 1. Crea una variable para guardar tu nombre y muéstralo en consola.
@@ -100,5 +132,4 @@ Ahora sí, para probarlo escribe en la terminal "node tuArchivo.js" y le das a e
     - Dias de la semana
     - Mensaje de error
     
-
 Y con esto y un let postre = bizcocho... me despidooo!!!
