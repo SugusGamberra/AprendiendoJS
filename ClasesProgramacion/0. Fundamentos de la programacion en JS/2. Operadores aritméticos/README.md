@@ -1,20 +1,29 @@
-# OPERADORES ARITMETICOS
+# 🧮 OPERADORES ARITMÉTICOS EN JS
 
 Estos son los simbolitos que le dicen a JS que operacion aritmetica debe realizar con los valores (ya sean literales o almacenados en variables).
 
-## Operadores básicos
+---
 
-- Suma: +
-- Resta: - 
-- Multiplicación: *
-- División: /
-- Módulo o resto: % (devuelve el resto de una división)
-- Exponenciación (potencias): **
+## 🔢 Operadores básicos
 
-## Que pasa con la concatenación y el simbolo "+"?
+| Operación | Símbolo | Ejemplo | Resultado |
+| :--- | :--- | :--- | :--- |
+| Suma | `+` | `2 + 3` | `5` |
+| Resta | `-` | `10 - 4` | `6` |
+| Multiplicación | `*` | `3 * 2` | `6` |
+| División | `/` | `8 / 2` | `4` |
+| Módulo o resto | `%` | `9 % 2` | `1` |
+| Exponenciación (potencias) | `**` | `2 ** 3` | `8` |
 
-Nite, si se usa con 2 números hace la suma. Si se usa con un string concatena, pero ojo, JS por defecto ante numero y texto siempre decide concatenar en vez de sumar:
+## 🧩 Que pasa con la concatenación y el simbolo "+"?
 
+JS decide según el tipo de datos:
+
+👉 Si ambos son números ➜ **suma**  
+👉 Si hay un string ➜ **concatena (une textos)**
+
+
+```js
 // Ojo!!! Operaciones con datos mixtos
 
 let resultado = "2" + 10 + 4;
@@ -41,23 +50,28 @@ let apellido = "Santiago";
 let nombreCompleto = nombre + apellido;
 console.log(nombreCompleto);
 
-## Asignación aritmética (abreviaturas)
+```
 
-- += : a = a + b 
-- -= : a = a - b
-- *= : a = a * b
-- /= : a = a / b
+## ⚙️ Asignación aritmética (abreviaturas)
 
-## Incremento y decremento
+| Símbolo | Equivale a... | Ejemplo  |
+| :--- | :--- | :--- |
+| `+=`    | `a = a + b`   | `x += 5` |
+| `-=`    | `a = a - b`   | `x -= 3` |
+| `*=`    | `a = a * b`   | `x *= 2` |
+| `/=`    | `a = a / b`   | `x /= 4` |
+
+
+## 🔁 Incremento y decremento
 
 Se usan para contar en bucles:
 
-- ++ : Incrementa el valor en 1
-- -- : Decrementa el valor en 1
+- ++ : Incrementa el valor en 1 (ej: i++)
+- -- : Decrementa el valor en 1 (ej: i--)
 
-## Prioridad de operadores
+## 🧠 Prioridad de operadores
 
-El orden importa más que el tamaño ñ.ñ
+El orden importa más que el tamaño 😏
 
 Per sé JS hace primero multiplicaciones, divisiones y el resto, luego hace sumas y restas. Si quieres priorizar un orden concreto debes usar paréntesis, lo que esté dentro se calculará primero!
 
@@ -66,4 +80,4 @@ Per sé JS hace primero multiplicaciones, divisiones y el resto, luego hace suma
 
 Ya estaría todo! En un futuro haré una carpeta con ejercicios para que practiques lo que se va viendo ;3
 
-Mientras échale un vistazo al [código](./operadoresAritmeticos.js) para que puedas ir viendo lo que explico y lo puedas probar por tu cuenta!
+Mientras échale un vistazo al [código](./operadoresAritmeticos.js) para que puedas ir viendo lo que explico y lo puedas probar por tu cuenta! 😉

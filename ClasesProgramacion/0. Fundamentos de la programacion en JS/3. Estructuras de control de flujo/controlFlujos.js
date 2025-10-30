@@ -34,13 +34,21 @@ if (edad >= 18 && tieneCarnet === true) {
     console.log("No tienes carnet de conducir.");
 }
 
-// Bucles: for, while, do...while
+// Bucles: for, for each, while, do...while
 
 // Bucle for
 
 for (let i = 0; i < 5; i++) {
     console.log("Iteración número: " + i);
 }
+
+// Bucle for each
+
+const asignaturasDAW = ["Programacion", "BBDD", "SI", "LM", "ED"];
+
+asignaturasDAW.forEach(function (asignatura){
+    console.log("Asignatura en curso: " + asignatura);
+})
 
 // Bucle while
 
