@@ -20,8 +20,10 @@ De momento estamos ejecutando código **línea por línea**. Estas estructuras n
 | Operador | Significado | Ejemplo |
 | :--- | :--- | :--- |
 | `&&` | **Y**: ambos deben ser verdaderos | `(edad > 18 && tieneCarnet)` |
-| `||` | **O**: al menos uno debe ser verdadero | `(edad > 18 || tieneCarnet)` |
+| `‖` | **O**: al menos uno debe ser verdadero | `(edad > 18 ‖ tieneCarnet)` |
 | `!` | **NO**: niega el valor | `!esValido` ➜ si `esValido` es `true`, devuelve `false` |
+
+> Me refiero a || pero en la tabla no me deja ponerlo porque se rompe x.x
 
 ---
 
