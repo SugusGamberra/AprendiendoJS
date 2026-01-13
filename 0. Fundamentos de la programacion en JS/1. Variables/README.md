@@ -56,19 +56,23 @@ Para el desarrollo web las variables pueden **guardarte referencias a los elemen
 
 #### 🔁 Ejemplos let
 
-Cuando definimos una variable con let, estamos indicando que el **valor es susceptible a cambios**.
+Cuando definimos una variable con `let`, estamos indicando que el **valor es susceptible a cambios**.
 
+```js
 let nombre "Mario";
 console.log(nombre);
 
 nombre = "Patricia";
 console.log(nombre);
+```
 
 #### 🔒 Ejemplos const
 
-Cuando definimos una variable con const, indicamos que su valor no cambia, es siempre constante.
+Cuando definimos una variable con `const`, indicamos que su valor no cambia, es siempre constante.
 
+```js
 const PI = 3.1415;
+```
 
 ---
 
@@ -76,7 +80,9 @@ const PI = 3.1415;
 
 La forma de poner comentarios aquí es tal que asi:
 
+```js
 // Hola, soy un comentario y sirvo para explicar el código! Tanto para ti, programador, y que no te pierdas con el tecletecle, como para tus compañeros de equipo si es el caso!
+```
 
 De esta forma organizamos el código y no nos perdemos ;3
 
@@ -88,7 +94,7 @@ De esta forma organizamos el código y no nos perdemos ;3
 
 En este archivo verás los resultados de los siguientes ejercicios para que puedas comparar y ver que están bien!
 
-Recuerda que para que no se vuelva loquete, comenta con // lo que hayas comprobado y descomenta quitando // del que quieras probar que funcione!
+Recuerda que para que no se vuelva loquete, comenta con `//` lo que hayas comprobado y descomenta `quitando //` del que quieras probar que funcione!
 
 ---
 
@@ -116,6 +122,7 @@ Son los que hemos visto (string, boolean, null...), los tipos de datos más simp
 
 Permiten agrupar datos relacionados bajo un mismo nombre, ejemplo:
 
+```js
 const miEx = {
     nombre: "Mario Borja",
     edad: "Muy viejo ya para andar haciendo el gilipollas",
@@ -127,6 +134,7 @@ const miEx = {
 // Accedemos a los datos de la siguiente forma:
 
 console.log(miEx.nombre);
+```
 
 ---
 
@@ -134,9 +142,11 @@ console.log(miEx.nombre);
 
 Si queremos saber qué tipo de datos se almacenan en una variable, lo cual viene dpm cuando depuras, lo hacemos así:
 
+```js
 let edad = 25;
 
 console.log(typeoff edad);
+```
 
 Ahí te mostrará que ese es number, o el que sea de la variable que selecciones!
 
@@ -151,4 +161,4 @@ Ahí te mostrará que ese es number, o el que sea de la variable que selecciones
     - Dias de la semana
     - Mensaje de error
     
-🍰 Y con esto y un let postre = bizcocho... me despidooo!!! 😋
+🍰 Y con esto y un `let postre = bizcocho`... me despidooo!!! 😋
