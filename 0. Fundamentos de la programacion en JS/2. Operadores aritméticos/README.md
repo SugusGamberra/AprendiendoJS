@@ -66,8 +66,8 @@ console.log(nombreCompleto);
 
 Se usan para contar en bucles:
 
-- ++ : Incrementa el valor en 1 (ej: i++)
-- -- : Decrementa el valor en 1 (ej: i--)
+- ++ : Incrementa el valor en 1 (ej: `i++`)
+- -- : Decrementa el valor en 1 (ej: `i--`)
 
 ## 🧠 Prioridad de operadores
 
