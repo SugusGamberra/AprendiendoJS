@@ -101,4 +101,56 @@ console.log(nombreUser);
 
 ---
 
-> Próximo día repaso de condicionales y bucles :P
+# 🩵 Condicionales
+
+Tenemos if, else y switch. Luego veremos bucles como for, while, etc.
+
+## If/Else
+
+Estructura si tenemos una condición:
+```js
+if(condicion) {
+    // si la condición es cierta se hace este bloque
+} else {
+    // se ejecuta si la condicion es falsa
+}
+```
+
+## Else if
+
+Si tenemos más condiciones:
+```js
+if(condicion1) {
+    // se ejecuta esete bloque si la condicion es true
+} else if(condicion2) {
+    // se ejecuta este bloque si la condicion 2 es true
+} else {
+    // este es opcional, se ejecuta si ninguna condicion de las de arriba es verdad
+}
+```
+
+Si tenemos condicones más complejas donde ambas (**AND**) tienen que cumplirse se usa `condicion1 && condicion2`, en caso de que sea una u (**OR**) otra `condicion1 || condicion2`.
+
+---
+
+## Switch
+
+Por ejemplo, para un menú con 7 opciones, es engorroso usar **if**. Es una estructura de control en el que si se cumple una determinada expresión irá por un camino u otro.
+
+```js
+// Menu con 7 opciones
+// esta es la variable que va cambiando de valor, depende de en que valor nos encontremos hara una u otra cosa
+let expresionAValidar = 7;
+
+switch(expresionAValidar) {
+    case valor1:
+        // Lo que se ejecuta en el caso de que sea 1
+        break;
+    case valor2:
+        // lo que se ejecuta en el caso de que sea el valor 2
+        break;
+    // el resto de casos
+    default
+        // opcional, es si no encuentra la opcion, no hace falta break
+}
+```

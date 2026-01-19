@@ -21,7 +21,7 @@ Aquí encontrarás todas las unidades de JS orientada a lenguaje de marcados est
 
 | 📁 Carpeta | 📝 Contenido | 📊 Estado |
 | :--- | :--- | :---: |
-| [`Unidad1`](./Unidad1/) | Introducción a JS: variables, operadores, control de flujo... | ⏳ En progreso |
+| [`0. Repaso`](./0.%20Repaso/) | Introducción a JS: variables, operadores, control de flujo... | ⏳ En progreso |
 
 ## 🚀 Empieza por aquí
 
