@@ -160,8 +160,97 @@ if (preferenciaActividad == "airelibre") {
     } else if (clima == "soleado" && horaDelDia == "noche") {
         console.log("clase de cocina");
     }
-
-    // faltaria los ejemplos y ejercicios del switch en proxima clase
 }
 
-// ejercicio 9: proximo dia
+// SWITCH
+
+let fruta = "manzana";
+
+switch (fruta) {
+    case "manzana":
+        console.log("El kg esta a 3€");
+        break;
+    case "banana":
+        console.log("El kg esta a 1.5€");
+        break;
+    case "naranaj":
+        console.log("El kg esta a 2.5€");
+        break;
+    default:
+        console.log("No tenemos " + fruta + " disponible");
+}
+
+/* -----------------
+BUCLESSSS
+--------------------
+*/
+// for
+
+// encontrar los números primos menores o iguales a 20 como ejemplo
+let n = 20;
+
+for (let numero = 2; numero <= n; numero++) {
+    let esPrimo = true;
+
+    // buscar divisores desde 2 hasta la raiz cuadrada desde el número
+    for (let divisor = 2; divisor <= Math.sqrt(numero); divisor++) {
+        if (numero % divisor  === 0) {
+            esPrimo = false;
+            break;
+        }
+    }
+
+    if (esPrimo === true) {
+        console.log(numero)
+    }
+
+}
+
+// sumatorio de impares
+let n1 = 10;
+let suma = 0;
+
+for (let i = 1; i <= n1; i++) {
+    if (i % 2 !== 0) {
+        suma += i;
+    }
+}
+
+console.log("La suma de todos los impares hasta " + n1 + " es: " + suma);
+
+// calcular factorial de un numero
+let n3 = 5;
+let factorial = 1;
+
+for (let i = 1; i <= n3; i++) {
+    factorial *= i;
+}
+
+console.log("El  factorial de " + n3 + " es: " + factorial);
+
+// calcular fibonacci
+let n4 = 10;
+
+if ( n4 === 1) {
+    console.log("0");
+}
+
+if (n4 === 2) {
+    console.log("0,1");
+} else {
+    let a = 0;
+    let b = 1;
+
+    let fibo;
+
+    let serie = "0, 1";
+
+    for (let i = 3; i <= n4; i++) {
+        fibo = a + b;
+        serie += `, ${fibo}`;
+        a = b;
+        b = fibo;
+    }
+
+    console.log("El fibonacci de " + n4 + " es: " + serie);
+}

@@ -154,3 +154,44 @@ switch(expresionAValidar) {
         // opcional, es si no encuentra la opcion, no hace falta break
 }
 ```
+
+---
+
+> 🏆 **TIP**: A la hora de trabajar lo mejor es suponer que algo es cierto y buscar la contradicción del mismo
+> `Math.sqrt`= Calcula la raíz cuadrada de un número
+
+# 🔁 Bucles
+
+## For
+
+Lo usamos cuando sabemos cuántas vueltas vamos a dar.
+
+```js
+// encontrar los números primos menores o iguales a 20 como ejemplo
+
+let n = 20;
+
+for (let numero = 2; numero <= n; numero++) {
+    let esPrimo = true;
+
+    // buscar divisores desde 2 hasta la raiz cuadrada desde el número
+    for (let divisor = 2; divisor <= Math.sqrt(numero); divisor++) {
+        if (numero % divisor  === 0) {
+            esPrimo = false;
+            break;
+        }
+    }
+
+    if (esPrimo === true) {
+        console.log(numero)
+    }
+}
+```
+
+## While
+
+Lo usamos cuando no sabemos cuándo vamos a terminar. Depende de un resultado dinámico que se calcula dentro del bucle o está esperando una condición que no sabe cuándo se va a producir.
+
+## Do-while
+
+Es igual que el while pero mínimo da una vuelta. Aunque la condición sea falsa te aseguras que una vez de la vuelta.
