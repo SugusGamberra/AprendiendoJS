@@ -14,6 +14,7 @@ let multiplos4o9 = 0;
 let multiplosnt = 0;
 let multiplos4y9 = 0;
 
+// mi forma
 for (let i = 1; i <= 300; i++) {
     if (i % 4 === 0 || i % 9 === 0) {
         multiplos4o9++;
@@ -30,6 +31,30 @@ console.log("Los multiplos de 4 o 9 son " + multiplos4o9);
 console.log("Los multiplos de 4 y 9 son " + multiplos4y9);
 console.log("Los no multiplos son " + multiplosnt);
 
+// la forma del profe
+
+/* 
+for (let i = 1; i <= 300; i++) {
+    // comprobar si es multiplo de 4
+    let esMultiplo4 = (i % 4 === 0);
+    // comprobar si es multiplo de 9
+    let esMultiplo9 = (i % 9 === 0);
+
+    if (esMultiplo4 || esMultiplo9) {
+        multiplosnt++;
+    }
+
+    if (esMultiplo4 || esMultiplo9) {
+        multiplos4o9++;
+    }
+
+    if (esMultiplo4 && esMultiplo9) {
+        multiplos4y9++;
+    }
+}
+ */
+
+
 /* Ejercicio 2 – Suma selectiva con reglas múltiples 
 
 Calcula la suma de los números del 1 al 500, aplicando las siguientes reglas: 
@@ -42,6 +67,7 @@ Al final, muestra:
 - La suma total obtenida. 
 - El número total de valores ignorados. */
 
+// mi forma
 let sumaTotal = 0;
 let valoresIgnorados = 0;
 
@@ -57,6 +83,31 @@ for (let i = 1; i <= 500; i++) {
     }
 }
 
+// forma del profe
+
+/*
+for (let i = 1; numero <= 500; i++) {
+// si es divisible entre 11 se ignora
+    if (i % 11 === 0) {
+        valoresIgnorados++;
+        continue;
+    }
+
+    if (i % 6 && i % 4 === 0) {
+        sumaTotal += i;
+        continue;
+    }
+
+    if (i % 6 === 0) {
+        valoresIgnorados++;
+        continue;
+    }
+
+    // si no se ha ignorado
+    sumaTotal += i;
+}
+*/
+
 console.log("Suma total: " + sumaTotal);
 console.log("Valores ignorados: " + valoresIgnorados);
 
@@ -71,6 +122,7 @@ let numero = 997;
 let esPrimo = true;
 let divisorEncontrado = null;
 
+// mi forma y la del profe son iguales
 for (let i = 2; i < numero; i++) {
     if (numero % i === 0) {
         esPrimo = false;
@@ -84,6 +136,27 @@ if (esPrimo) {
 } else {
     console.log(numero + " no es primo, es divisible por " + divisorEncontrado);
 }
+
+// forma del profe con bucle while
+
+/*
+// probar divisores desde 2 hasta numero - 1
+while (esPrimo && divisor < numero) {
+    if (numero % divisor === 0) {
+        esPrimo = false;
+        divisorEncontrado = divisor;
+        break;
+    }
+    divisor++;
+}
+
+if (esPrimo) {
+    console.log(numero + " es primo");
+} else {
+    console.log(numero + " no es primo, es divisible por " + divisorEncontrado);
+}
+
+*/
 
 /* Ejercicio 4 – Análisis matemático de los dígitos 
 
@@ -100,6 +173,7 @@ let totalDigitos = 0;
 let digitosPares = 0;
 let sumaDigitos = 0;
 
+// mi forma y la del profe es la misma, lo q no usa una variable tmeporal, yo la uso xk al quitarla da error de ejecucion
 while (temp > 0) {
     let digito = temp % 10;
     totalDigitos++;
@@ -131,15 +205,16 @@ Al finalizar, indica:
 let capital = 1000;
 let year = 0;
 
+// mi forma y la del profe es igual
 while (capital <= 2500) {
     year++;
-    capital *= 1.035;
+    capital = capital + (capital * 0.035);
     console.log("Año " + year + " → Capital: " + capital.toFixed(2));
 }
 
 console.log("Total de años: " + year);
 console.log("CApital final alcanzado: " + capital.toFixed(2));
 
-/* Estos ejercicios NO ESTÁN CORREGIDOS!!!
-Si hay algo mal lo cambio cuando lo corrijan en clase
-Pa100cia, gracias uwu*/
+/* Estos ejercicios estan ya corregidos por el profesor!!
+Puedes tomarlos por referencia :3
+*/
