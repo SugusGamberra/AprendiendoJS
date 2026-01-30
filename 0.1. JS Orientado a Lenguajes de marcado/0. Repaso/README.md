@@ -195,3 +195,39 @@ Lo usamos cuando no sabemos cuándo vamos a terminar. Depende de un resultado di
 ## Do-while
 
 Es igual que el while pero mínimo da una vuelta. Aunque la condición sea falsa te aseguras que una vez de la vuelta.
+
+---
+
+# ❌ Try catch & Finally
+
+Sirve para **manejar errores** y que nosotors los programadores podamos manejar estas excepciones y nos permita gestionarlas y responder ante ellas en tiempo de ejecución de manera controlada, evitando así que el programa falle completamente ante situaciones excepcionales o inesperadas.
+
+Mejora la experiencia del usuario **evitando detenciones abruptas** de la app, ofrece mensajes de error claros y ofrece **acciones sugeridas para solucionarlo**!
+
+Como permite poner textos **facilita la depuración**: encontrar fallos y errores es muy sencillo para identificar y corregir problemas, registra el contexto del error, permite la recuperación de errores capturando excepciones mientras la app sigue funcionando e implementa fallos controlados en situaciones de error.
+
+**Asegura la ejecución de código crítico garantizando que se realicen operaciones de limpieza, liberación de recursos**... Ponte tú que hay un bucle infinito, tendría que liberarlo.
+
+**Contribuye a la seguridad** de la app, previene la exposición de info sensible, mejora la gestión de errores, promueve mejores prácticas de programación mejorando la reflexión sobre posibles fallos y respuestas adecuadas...
+
+Tiene **soporte para operaciones asíncronas**.
+
+Es importante a la hora del servidor ya que detecta errores posibles del server.
+
+La declaración es la siguiente:
+
+```js
+try {
+    // codigo que se ejecuta que puede lanzar un error
+}
+
+catch (error) {
+    // captura del error que se puede generar y se encarga del manejo del error
+}
+
+finally {
+    // codigo que se ejecuta despues del trycatch, ocurra o no un error
+}
+```
+
+Puede ser util en situaciones como, por ejemplo, está haciendo una función y queremos liberar memoria y recursos de la función.

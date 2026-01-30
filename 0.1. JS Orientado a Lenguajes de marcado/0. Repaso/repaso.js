@@ -254,3 +254,73 @@ if (n4 === 2) {
 
     console.log("El fibonacci de " + n4 + " es: " + serie);
 }
+
+// trycatch y finally
+
+try {
+    console.log("Inicio del bloque try");
+    noExiste(); //esta funcion no esta definida, la ponemos pa q lance un error
+    console.log("Fin del bloque try");
+} catch (error) {
+    console.log(error.message); // si no lo ponemos asi no te saca el mensaje de error correctamente
+} finally {
+    console.log("Bloque que siempre se ejecuta");
+}
+
+// buscar posiciones en cadenas
+let cadena = "Hola mundo";
+
+console.log(cadena.length); 
+
+console.log(cadena[0]);
+console.log(cadena.length - 1);
+
+for (let i = 0; i < cadena.length; i++) {
+    console.log(cadena[i]);
+}
+
+// buscar num primos usando trycatch
+
+let inicio = 1; // prueba aqui a cambiar los valores, tipo poner un string, numero negativo o numero mayor al fin
+let fin = 20;
+
+try {
+    // validar que inicio y fin sean numeros
+    if (typeof inicio !== 'number' || typeof fin !== 'number') {
+        throw new Error("Inicio y fin deben ser numeros"); //creamos un error para nuestro contexto
+    }
+
+    // valida q los numeros son negativos
+    if (inicio < 0 || fin < 0) {
+        throw new Error("Los numeros no pueden ser negativos en este ejemplo");
+    }
+
+    // valida q el inicio es menor q el fin
+    if (inicio > fin) {
+        throw new Error("El numero inicial no puede ser mayor que el final");
+    }
+
+    // el calculo tb puede ser susceptible de error asi q lo metemos aqui
+    console.log("Numeros primos entre " + inicio + " y " + fin + ":");
+
+    for (let numero = inicio; numero <= fin; numero++) {
+        let esPrimo = true;
+
+        if (numero <=1) {
+            esPrimo = false; // el 0 o 1 no son primos
+        } else {
+            for (let divisor = 2; divisor <= Math.sqrt(numero); divisor++) {
+                if (numero % divisor === 0) {
+                    esPrimo = false;
+                    break;
+                }
+            }
+        }
+
+        if (esPrimo) {
+            console.log("El numero " + numero + " es primo");
+        }
+    }
+} catch (error) {
+    console.log(error.message);
+}

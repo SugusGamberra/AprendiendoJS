@@ -218,3 +218,93 @@ console.log("CApital final alcanzado: " + capital.toFixed(2));
 /* Estos ejercicios estan ya corregidos por el profesor!!
 Puedes tomarlos por referencia :3
 */
+
+// trycatch y finally
+
+/* Ejercicio 1: Suma de Dígitos hasta que sea un Dígito Único
+
+Dados un número inicial n, suma sus dígitos repetidamente hasta que el resultado sea un solo dígito. 
+Las comprobaciones de Errores son las siguientes:
+
+- Validar que n sea un número. Usa typeof n para asegurarte de que la entrada es de tipo number.
+- Validar que n sea un número entero. Utiliza Number.isInteger(n) para evitar tratar con números decimales.
+- Validar que n sea un número positivo. Asegúrate de que n >= 0, ya que el ejercicio no tiene sentido para números negativos. */
+
+// mi forma
+let n = 38;
+
+try {
+    // validar q sea numero
+    if (typeof n !== 'number') {
+        throw new Error("El valor introducido debe ser un numero.");
+    }
+
+    // validar q sea entero
+    if (!Number.isInteger(n)) {
+        throw new Error("El valor introducido debe ser un numero entero");
+    }
+
+    // validar q sea positivo
+    if (n < 0) {
+        throw new Error("El valor introducido debe ser un numero positivo");
+    }
+
+    console.log("Numero valido, procediendo la suma de " + n);
+
+    while (n > 9) {
+        let suma = 0;
+        let cadena = n.toString();
+
+        for (let i = 0; i < cadena.length; i++) {
+            suma += parseInt(cadena[i]);
+        }
+
+        console.log("Suma parcial: " + suma);
+        n = suma;
+    }
+
+    console.log("Resultado final: " + n);
+} catch (error) {
+    console.log(error.message);
+} finally {
+    console.log("Ejecucion finalizada");
+}
+
+// forma simplificada a lo dado en clases
+let number = 38.8;
+
+try {
+    if (typeof number !== 'number') {
+        throw new Error("No es un numero el valor introducido");
+    }
+
+    if (number % 1 !== 0) {
+        throw new Error("No es numero entero");
+    }
+
+    if (number < 0) {
+        throw new Error("No es un numero positivo");
+    }
+
+    console.log("Calculando " + number);
+
+    while (number >= 9) {
+        let suma = 0;
+
+        let cadena = number + "";
+
+        for (let i = 0; i < cadena.length; i++) {
+            let digito = cadena[i] * 1;
+            suma = suma + digito;
+        }
+
+        console.log("Suma parcial: " + suma);
+        number = suma;
+    }
+
+    console.log("Resultado final: " + number);
+} catch (error) {
+    console.log(error.message);
+} finally {
+    console.log("Fin ejecucion");
+}
