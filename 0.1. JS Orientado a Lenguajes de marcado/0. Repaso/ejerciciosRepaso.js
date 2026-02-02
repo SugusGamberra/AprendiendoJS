@@ -231,7 +231,7 @@ Las comprobaciones de Errores son las siguientes:
 - Validar que n sea un número positivo. Asegúrate de que n >= 0, ya que el ejercicio no tiene sentido para números negativos. */
 
 // mi forma
-let n = 38;
+let n = 9875;
 
 try {
     // validar q sea numero
@@ -271,7 +271,7 @@ try {
 }
 
 // forma simplificada a lo dado en clases
-let number = 38.8;
+let number = 9875.8;
 
 try {
     if (typeof number !== 'number') {
@@ -307,4 +307,144 @@ try {
     console.log(error.message);
 } finally {
     console.log("Fin ejecucion");
+}
+
+// forma corregida del profe
+/* por algun motivo la forma del profe me crea un bucle infinito asi q lo comento
+let n1 = 9875;
+
+try {
+
+    // 1ª comprobacion: n sea numero
+
+    if (typeof n1 !== 'number') {
+        throw new Error("La entrada debe ser un numero");
+    }
+
+    // 2º comprobacion: validar q n sea entero
+    if (!Number.isInteger(n1)) {
+        throw new Error("La entrada debe ser un numero entero");
+    }
+
+    // 3ª comprobacion: q sea positivo
+    if (n1 < 0) {
+        throw new Error("El numero debe ser positivo");
+    }
+
+    // procesamiento para sumar los digitos
+
+    while (n1 > 9) {
+        var suma = 0; // var para zona externa
+        var numero1 = n1; // let para zona interna
+
+        while (numero1 > 0) {
+            suma += numero1 % 10;
+            numero = Math.floor(numero1 / 10); //eliminamos el ultimo digito del numero y recortamos pa q no tenga dcecimales
+        }
+
+        console.log("El sumatorio d cifras de " + n1 + " es " + suma);
+
+        n1 = suma;
+    }
+
+    
+
+} catch (error) {
+
+    console.error(error.message);
+
+} finally {
+
+    console.log("Programa finalizado");
+}
+
+*/
+
+// ejercicio 2: comprobar caracteres recurrentes
+
+let cadena1 = "SugusGamberra";
+
+try {
+    //validar q la entrada sea una cadena d texto
+
+    if (typeof cadena1 !== 'string') {
+        throw new Error("La cadena tiene que ser un texto");
+    }
+
+    // calidar que la cadena no este vacia
+
+    if (cadena1.length === 0) {
+        throw new Error("No puede estar el texto vacio");
+    }
+
+    // comprobar 
+
+    var caracterRecurrente = null;
+
+    // iteramos sobre la cadena para buscar el primer caracter q se repite
+    for (let i = 0; i < cadena1.length; i++) {
+        let caracterActual = cadena1[i];
+
+        if (cadena1.indexOf(caracterActual, i+1) !== -1) {
+            caracterRecurrente = caracterActual;
+            break;
+        }
+    }
+
+    if(caracterRecurrente) {
+        console.log("El primer caracter recurrente es " + caracterRecurrente);
+    } else {
+        console.log("No hay caracteres recurrentes");
+    }
+
+} catch (error) {
+    console.error(error.message);
+
+} finally {
+    console.log("Programa finalizado");
+}
+
+// ejercicio 3 : verificar q un numero es capicuo
+
+let n2 = 12321;
+
+try {
+
+    // conprobar q sea un numero
+    if (typeof n2 !== 'number') {
+        throw new Error("Tiene q ser un numero");
+    }
+
+    // comprobar q sea entero
+    if (!Number.isInteger(n2)) {
+        throw new Error("Tiene q ser un num entero");
+    }
+
+    //comprobar q sea positivo
+    if (n2 < 0) {
+        throw new Error("tiene q ser un num positivo");
+    }
+
+    // ejecucion, lo mejor es convertir a cadena y comparar
+    let numeroCadena = n2.toString();
+    let esCapicua = true;
+
+    for (let i = 0; i < numeroCadena.length / 2; i++) {
+        if(numeroCadena[i] != numeroCadena[numeroCadena.length - 1 - i]) {
+            esCapicua = false;
+            break;
+        }
+    }
+
+    if (esCapicua = false) {
+        console.log("No es capicua");
+    }
+
+    if (esCapicua = true) {
+        console.log("Es capicua");
+    }
+} catch (error) {
+    console.error(error.message);
+} finally {
+    console.log("Fin programa!");
 }
