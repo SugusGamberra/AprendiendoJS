@@ -231,3 +231,60 @@ finally {
 ```
 
 Puede ser util en situaciones como, por ejemplo, está haciendo una función y queremos liberar memoria y recursos de la función.
+
+---
+
+#  🚬 Funciones
+
+Hoy aprendemos a crear funciones! Es importante conocerlas porque a la hora de modificar cosas en JS será clave usarlas y crearlas.
+
+Para crear una funcion normal la fórmula en JS es `function nombreFuncion(parametrosQueRecibe, parametro2) { return "Texto concatenado con una variable ${parametrosQueRecibe}, ${parametro2}; }` y se llama a la función con la fórmula `console.log(nombreFuncion("Lo que sea xd", "jeje"));`.
+
+**Return** si queremos que devuelva algún tipo de valor y llamarlo desde el **main**.
+
+```js
+function sumar(a, b) {
+    return a + b;
+}
+
+console.log(sumar(1, 2));
+```
+
+Ahora vamos a ver funciones más elaboradas, que son diferentes de lo que estamos acostumbrados: **funciones nombradas** o **funciones anónimas**, que sirve para automatizar tareas.
+
+Una **función nombrada** es un tipo de función con un nombre específico que se asigna durante su declaración y nos permite escribir bloques y mantiene un identificador único, un ámbito, y se suele usar en un tema de **recursividad**.
+
+Las **funciones anónimas** no se les asigna nombres, se usan directamente donde sea necesario asignar un valor o argumento a otras funciones, se usan una única vez y tiene acceso a nivel **local**.
+
+```bash
+let mostrarMensaje = function(mensaje) {
+    console.log(mensaje);
+}
+
+mostrarMensaje("Holiwis, q tal?")
+```
+
+Creamos una variable y le asignamos una especie de tarea, así se usan las funciones anónimas. Esto es muy útil para modificar páginas web.
+
+Las **funciones flecha** tienen una sintaxis muy concisa y capturan el valor del ambito en que se crea y actúan para hacer una serie de tareas, no tienen argumentos y no se usan como métodos.
+
+Por convección se pone con `constante` porque su valor no varía, pero se puede usar con cualquier declaración.
+
+```js
+// un parametro
+const cuadrado = x => x*x;
+
+// 2 parametros (o mas)
+const suma =  (a, b) => a + b;
+
+const ordenar = (c, d) => {
+    if (c > d) {
+        return c;
+    } else {
+        return d;
+    }
+}
+
+// sin parametros
+const saludar = () => console.log("Hola caraqlo");
+```

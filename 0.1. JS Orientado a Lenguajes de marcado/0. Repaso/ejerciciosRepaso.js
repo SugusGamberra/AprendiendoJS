@@ -448,3 +448,62 @@ try {
 } finally {
     console.log("Fin programa!");
 }
+
+// Ejercicio de funciones
+
+/* Desarrollar un sistema q analice el texto proporcionado x el user
+Dara estadisticas y caracteristicas del mismo
+
+1. Contar num de palabras
+2. Identificar la palabra mas larga
+3. Calcular el promedio d longitud d palabra
+4. Identificar la primera letra que NO se repite en el texto
+5. Contar el num d vececs q aparece cada letra (la da igual mayus o minus)
+6. Generar un reporte con los resultados anteriores
+7. Manejar errores x ejemplo q el texto este vacio
+*/
+
+function analizarTexto(texto) {
+    // validacion inicial
+    try {
+
+        texto = "Hola soy sugus y tengo 2 perros lorzuos";
+
+        if (typeof texto !== 'string' || texto.trim().length === 0) {
+        throw new Error("El texto no debe estar vacio o no es valido");
+        }
+
+        // analisis basico
+        const numPalabras = contarPalabras(texto); // aun no esta definido, cuando acabemos con el main se definen
+        const palabraMasLarga = encontrarPalabraMasLarga(texto);
+        const promedioLongitud = calcularPromedioLongitud(texto);
+
+        // analisis avanzado con funciones flecha
+        const primeraLetraNoRepe = encontrarPrimeraLetraNoRepe(texto);
+        const frecuenciaLetras = contarFrecuenciaLetras(texto);
+
+        // generacion del reporte
+        console.log(`Análisis del texto: 
+            - Número de palabras: ${numPalabras}
+            - Palabra mas larga: ${palabraMasLarga}
+            - Promedio de longitud de palabra: ${promedioLongitud}
+            - Primera letra no repetida: ${primeraLetraNoRepe}
+            - Frecuencia de letras: ${JSON.stringify(frecuenciaLetras)}
+            `)
+    } catch (error) {
+        console.error(error.message);
+    }
+    
+    const contarPalabras = function (texto) {
+        return texto.split(/\s+/).filter(Boolean).length;
+    }
+
+    const encontrarPalabraMasLarga = function (texto) {
+        const palabras = texto.split(/\s+/).filter(Boolean).length;
+        return palabras.reduce((max, palabra) => palabra.length > max.length ? palabra : max, 0);
+    };
+
+    const calcularPromedioLongitud = function (texto) {
+        // continuamos el proximo dia q esta es larguita :P
+    }
+}

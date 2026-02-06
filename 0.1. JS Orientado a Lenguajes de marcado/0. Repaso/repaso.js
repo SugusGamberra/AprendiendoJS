@@ -324,3 +324,9 @@ try {
 } catch (error) {
     console.log(error.message);
 }
+
+//funciones
+
+const calcularAreaCirculo = radio => Math.PI * radio * radio;
+
+console.log(calcularAreaCirculo(5));
