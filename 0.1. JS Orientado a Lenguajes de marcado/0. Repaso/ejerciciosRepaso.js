@@ -504,6 +504,45 @@ function analizarTexto(texto) {
     };
 
     const calcularPromedioLongitud = function (texto) {
-        // continuamos el proximo dia q esta es larguita :P
+        const palabras = texto.split(/\s+/).filter(Boolean).length;
+        const totalLongitud = palabras.reduce((sum, palabra) => sum + palabra, 0);
     }
+
+
 }
+
+// el profe mando a tomar x saco esto HAHAHAHAHAH va a poner mas funciones flecha
+
+// recibimos 3 params, 2 operandos y 1 fun flecha q es la operacion a realizar con los operandos
+
+function calculadoraBasica(numero1, numero2, operacion) {
+    return operacion(numero1, numero2);
+}
+
+const resultadoSuma = calculadoraBasica(2, 3, (a, b) => a + b);
+console.log(resultadoSuma);
+
+const resultadoMult = calculadoraBasica(2, 3, (a, b) => a * b);
+console.log(resultadoMult);
+
+// generador d saludos con funcion anonima
+
+function generadorSaludo(nombre) {
+    const saludo = function(n) {
+        return "Hola " + n + ", q tal?"
+    };
+
+    return saludo(nombre);
+}
+
+const saludo = generadorSaludo("Sugus");
+console.log(saludo);
+
+// operador condicional personalizado
+
+function operadorCondicional(condicion, funcionTrue, funcionFalse) {
+    return condicion ? funcionTrue() : funcionFalse();
+}
+
+const mensaje = operadorCondicional(true, () => "El valor es verdadero", () => "El valor es falso");
+console.log(mensaje);

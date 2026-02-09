@@ -283,7 +283,7 @@ const ordenar = (c, d) => {
     } else {
         return d;
     }
-}
+};
 
 // sin parametros
 const saludar = () => console.log("Hola caraqlo");
