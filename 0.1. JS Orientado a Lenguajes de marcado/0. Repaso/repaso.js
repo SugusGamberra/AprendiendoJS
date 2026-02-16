@@ -330,3 +330,73 @@ try {
 const calcularAreaCirculo = radio => Math.PI * radio * radio;
 
 console.log(calcularAreaCirculo(5));
+
+// recursividad
+
+function buscarLetra(string, letra, indice) {
+    // caso base: si el indice es = a la longitud del string, finiquitao
+    if (indice === string.length) {
+        return false; // ultima de las letras, no se puede continuar
+    }
+
+    // 2º caso base: si el caracter que esta en la posicion actual del indice es la letra buscada pues hemos terminado
+    if (string[indice] === letra) {
+        return true; // letra encontrada
+    }
+
+    // caso recursivo
+    return buscarLetra(string, letra, indice + 1); // seguimos buscando en el siguiente indice
+}
+
+// recursividad suma de numeros hasta n
+
+function sumatorio(n) {
+    // caso base: si n es 1, la suma es 1
+    if (n === 1) {
+        return 1;
+    } else {
+        return n + sumatorio(n - 1);
+    }
+}
+
+console.log(sumatorio(5));
+
+// exponenciacion recursiva: recibe par d valores (base y exponente) y tiene q ir haciendo la potencia
+
+function potencia(base, exponente) {
+    // caso base: cualquier numero elevado a la potencia de 0 es 1
+    if (exponente === 0) {
+        return 1;
+    } else {
+        //caso recursivo
+        return base * potencia(base, exponente - 1);
+    }
+}
+
+console.log(potencia(5, 3));
+
+// gestor de tareas
+
+const GestorTareas = {
+    // agregar una nueva tarea con estado incompleto x defecto
+    agregarTarea: function(titulo) {
+        this.titulo = false;
+    },
+
+    // marcar la tarea como completada
+    completarTarea: function(titulo) {
+        if (this.titulo != "undefined") {
+            this.titulo = true;
+        } else {
+            console.log("La tarea " + titulo + " no se ha encontrado");
+        }
+    },
+
+    // mostrar pendientes
+    mostrarPendientes: function() {
+        console.log("Tareas pendientes: ");
+        for (let titulo in this.titulo) {
+            console.log(titulo);
+        }
+    },
+}

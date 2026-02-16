@@ -10,6 +10,8 @@ Recorre los números del 1 al 300 y calcula:
 
 Muestra los tres resultados por consola. */
 
+console.log("EJERCICIO 1 - Conteo lógico en rango fijo");
+
 let multiplos4o9 = 0;
 let multiplosnt = 0;
 let multiplos4y9 = 0;
@@ -67,6 +69,8 @@ Al final, muestra:
 - La suma total obtenida. 
 - El número total de valores ignorados. */
 
+console.log("EJERCICIO 2 - Suma selectiva con reglas multiples");
+
 // mi forma
 let sumaTotal = 0;
 let valoresIgnorados = 0;
@@ -118,6 +122,8 @@ Determina si el número 997 es primo. El programa debe:
 - Detener el proceso en cuanto se detecte un divisor. 
 - Mostrar si el número es primo o no y, en caso negativo, el divisor encontrado.*/
 
+console.log("EJERCICIO 3 - Comprobacion de numero primo con parada anticipada");
+
 let numero = 997;
 let esPrimo = true;
 let divisorEncontrado = null;
@@ -166,6 +172,8 @@ Dado el número 90817264, calcula:
 - La suma de todos los dígitos.
 - Los cálculos deben realizarse mediante operaciones matemáticas. */
 
+console.log("EJERCICIO 4 - Analisis matematico de los digitos");
+
 const num = 90817264;
 let temp = num;
 
@@ -202,6 +210,8 @@ Al finalizar, indica:
 - El número total de años necesarios. 
 - El capital final alcanzado. */
 
+console.log("EJERCICIO 5 - Simulacion de crecimiento con condicion de parada");
+
 let capital = 1000;
 let year = 0;
 
@@ -221,7 +231,7 @@ Puedes tomarlos por referencia :3
 
 // trycatch y finally
 
-/* Ejercicio 1: Suma de Dígitos hasta que sea un Dígito Único
+/* Ejercicio 6: Suma de Dígitos hasta que sea un Dígito Único
 
 Dados un número inicial n, suma sus dígitos repetidamente hasta que el resultado sea un solo dígito. 
 Las comprobaciones de Errores son las siguientes:
@@ -229,6 +239,8 @@ Las comprobaciones de Errores son las siguientes:
 - Validar que n sea un número. Usa typeof n para asegurarte de que la entrada es de tipo number.
 - Validar que n sea un número entero. Utiliza Number.isInteger(n) para evitar tratar con números decimales.
 - Validar que n sea un número positivo. Asegúrate de que n >= 0, ya que el ejercicio no tiene sentido para números negativos. */
+
+console.log("EJERCICIO 6 - Suma de digitos hasta que sea un digito unico");
 
 // mi forma
 let n = 9875;
@@ -360,7 +372,9 @@ try {
 
 */
 
-// ejercicio 2: comprobar caracteres recurrentes
+// ejercicio 7: comprobar caracteres recurrentes
+
+console.log("EJERCICIO 7 - Comprobacion de caracteres recurrentes");
 
 let cadena1 = "SugusGamberra";
 
@@ -404,7 +418,9 @@ try {
     console.log("Programa finalizado");
 }
 
-// ejercicio 3 : verificar q un numero es capicuo
+// ejercicio 8 : verificar q un numero es capicuo
+
+console.log("EJERCICIO 8 - Verificar que un numero es capicuo");
 
 let n2 = 12321;
 
@@ -463,6 +479,8 @@ Dara estadisticas y caracteristicas del mismo
 7. Manejar errores x ejemplo q el texto este vacio
 */
 
+console.log("EJERCICIO 9 - Ejercicio de funciones");
+
 function analizarTexto(texto) {
     // validacion inicial
     try {
@@ -515,6 +533,8 @@ function analizarTexto(texto) {
 
 // recibimos 3 params, 2 operandos y 1 fun flecha q es la operacion a realizar con los operandos
 
+console.log("EJERCICIO 10 - Funciones flecha y de orden superior");
+
 function calculadoraBasica(numero1, numero2, operacion) {
     return operacion(numero1, numero2);
 }
@@ -526,6 +546,8 @@ const resultadoMult = calculadoraBasica(2, 3, (a, b) => a * b);
 console.log(resultadoMult);
 
 // generador d saludos con funcion anonima
+
+console.log("EJERCICIO 11 - Generador de saludos con funcion anonima");
 
 function generadorSaludo(nombre) {
     const saludo = function(n) {
@@ -540,9 +562,74 @@ console.log(saludo);
 
 // operador condicional personalizado
 
+console.log("EJERCICIO 12 - Operador condicional personalizado");
+
 function operadorCondicional(condicion, funcionTrue, funcionFalse) {
     return condicion ? funcionTrue() : funcionFalse();
 }
 
 const mensaje = operadorCondicional(true, () => "El valor es verdadero", () => "El valor es falso");
 console.log(mensaje);
+
+// suma de numeros hasta llegar a n con funcion recursiva q devuelva la suma d todos los numeros
+
+console.log("EJERCICIO 13 - Funcion recursiva para suma de numeros hasta n");
+
+function sumaHastaN(n) {
+    // caso base
+    if (n === 1) {
+        return 1;
+    } else {
+        //caso recursivo
+        return n + sumaHastaN(n - 1);
+    }
+}
+
+console.log("El resultado del sumatorio con funcion recursiva es " +sumaHastaN(4));
+
+// variables globales y locales
+
+console.log("EJERCICIO 15 - Variables globales y locales");
+
+var variableGlobal = "Soy una variable global";
+
+function ejemploAmbito() {
+    var variableLocalFuncion = "Soy variable local a la funcion";
+
+    if (true) {
+        var aunSoyLocalFuncion = "Sigo siendo local a la toda la funcion porque tengo var";
+        let variableLocalBloque = "Soy una variable local al bloque if porque tengo let y solo tengo sentido dentro de las llaves";
+        console.log(variableGlobal); // es accesible x ser global
+        console.log(variableLocalFuncion); // es accesible x estar dentro de la funcion, fuera no se ve
+        console.log(variableLocalBloque); // es accesible tambien
+    }
+
+    console.log(aunSoyLocalFuncion); // tambien es accesible
+    // console.log(variableLocalBloque); // ya no es accesible por estar fuera del if
+}
+
+// console.log(variableLocalFuncion); // no es accesible, solo es accesible la variableGlobal
+
+console.log("EJERCICIO 16 - Crear una clase factura con id, total y nombre de cliente");
+
+class Factura {
+    constructor(id, total, nombreCliente) {
+        this.id = id;
+        this.total = total;
+        this.nombreCliente = nombreCliente;
+    }
+}
+
+const paco = new Factura(1, 87, "Paco Pepe");
+
+console.log("La factura de " + paco.nombreCliente + " con id " + paco.id + " asciende al total de " + paco.total + " €.");
+
+// crear una clase para un contador de sesiones, cada vez que se llama a conectarse aumenta el numero de usuarios sincronos. Al llamar al desconectarse se resta 1, maximo de 10 usuarios, minimo 0
+
+console.log("EJERCICIO 17 - Contador de sesiones con clase");
+
+class ContadorSesiones {
+    constructor() {
+
+    }
+}

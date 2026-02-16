@@ -288,3 +288,111 @@ const ordenar = (c, d) => {
 // sin parametros
 const saludar = () => console.log("Hola caraqlo");
 ```
+
+---
+
+# 🕴🏻 Recursividad
+
+Cuando hablamos de **recursividad** nos referimos a una función que es capaz de **llamarse a sí misma** para resolver un determinado problema. 
+
+Estas funciones recursivas son *similares a un bucle*, pero en vez de iterar sobre una lista o un for, iteran sobre llamarse a sí mismos pero cada vez intentando resolverse de forma más sencilla.
+
+La solución a lo complejo es sumar o juntar soluciones **más sencillas**, por ejemplo: `problema a = problema a / 2 + problema a/2` y así constantemente hasta llegar al **caso base** (la solución es directa).
+
+```java
+// resolvemos un factorial, este es el procedimiento que haria el pc internamente
+
+// 5! = 5x4x3x2x1
+// 5! = 5 x 4!
+//     4! = 4 x 3!
+//         3! = 3 x 2!
+//             2! = 2 x 1!
+//                 1! = 1 x 0!
+//                     0! = 1
+//                 1! = 1 x 1 = 1
+//             2! = 2 x 2 = 4
+//         3! = 3 x 4 = 12
+//     4! = 4x 12 = 36
+// 5! = 5 x 36 = 120
+
+function factorial(n) {
+    // caso base primero
+    if (n === 0) {
+        return 1;
+    }
+
+    // caso recursivo n! = n x factorial(n-1)
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+console.log(factorial(50));
+```
+
+---
+
+# 🐳 POO
+
+Para nosotros crear objetos, propiedades, métodos y tal y encapsular la info.
+
+Por ejemplo una persona tiene nombre, datos, tal. Creamos una clase que vaya trabajando con su info y poniendo funciones orientadas a dicho objeto.
+
+1. Podemos crear objetos de forma manual:
+
+```js
+const persona {
+    nombre: "Mario",
+    edad: 33
+};
+```
+
+2. En vez de crearlo de forma literal y directa, podemos usar constructores:
+
+```js
+const persona = new Object();
+persona.nombre = "Juan";
+persona.edad = 50;
+```
+
+3. Forma moderna de creación de objetos y la que vamos a usar:
+
+```js
+// creamos una clase, siempre empieza en mayuscula por convencion
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+}
+
+const sugus = new Persona("Sugus", 87);
+
+console.log(sugus.nombre + " " + sugus.edad);
+```
+
+Podemos crear diversas cosas con esto, por ejemplo, cada vez que creamos un contador le creamos un atributo valor y lo inicializamos vacío (a 0) y una vez construido podemos meterle métodos:
+
+```js
+const contador = {
+    valor: 0,
+
+    // metodo pa incrementar el valor
+    incrementar: function() {
+        this.valor++;
+        console.log("Valor incrementado: " + this.valor);
+    },
+
+    // metodo pa mostrar valor actual
+    mostrarValor: function() {
+        console.log("El valor del contador es " + this.valor);
+    }
+}
+
+contador.incrementar();
+contador.incrementar();
+contador.incrementar();
+contador.mostrarValor();
+```
+
+> Proximo dia veremos listas de arrays, por si hacemos una web que podamos modificar las cosas en css de una lista
