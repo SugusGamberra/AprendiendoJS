@@ -400,3 +400,59 @@ const GestorTareas = {
         }
     },
 }
+
+const items = ["Manzana", "Banana"];
+
+item.push("Naranja");
+
+console.log("Después del push: ", items);
+
+// se refleja como se añade al final
+
+const elementoEliminado = items.pop();
+
+console.log("Después del pop: ", items);
+console.log("Elemento eliminado: ", elementoEliminado);
+
+// se refleja que se elimino el ultimo, te devuelve el elemento eliminado
+
+const primerElemento = items.shift();
+
+console.log("Después del shift: ", items);
+console.log("Elemento del comienzo eliminado: ", primerElemento);
+
+// se refleja q se elimino el primer elemento
+
+items.unshift("Fresa", "limón");
+
+console.log("Después del unshift: ", items);
+
+// se reflejan los nuevos al comienzo
+
+const items2 = ["a", "b", "c", "d", "e"];
+const subArray = items.slice(1, 4);
+
+console.log("Después del slice: ", subArray);
+
+// Se imprime los elementos seleccionados del slice. El elemento 1 se incluye, pero el 4 se EXCLUYE.
+
+items2.splice(2, 1, "x", "y");
+
+console.log("Después del splice: ", items2);
+
+// machaca del 2 cargandose la c, y añade el x e y
+
+items2.forEach((item, index) => {
+    console.log("Elemento en posicion ", index, " es ", item);
+})
+
+// recorre la lista sin usar for
+
+const mayusculas = items2.map(item => item.toUpperCase());
+
+console.log("Después del map: ", mayusculas);
+
+// nos pasa el array todo en mayusculas
+
+const filtrados = items2.filter(item => item > 'c');
+console.log("Después del filter: ", filtrados);

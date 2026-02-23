@@ -395,4 +395,101 @@ contador.incrementar();
 contador.mostrarValor();
 ```
 
-> Proximo dia veremos listas de arrays, por si hacemos una web que podamos modificar las cosas en css de una lista
+---
+
+# 🗒️ Arrays
+
+Es una estructura de datos, como una lista, que permite almacenar múltiples valores en una sola variable.
+
+En JS permite que contenga elementos de cualquier tipo (números, strings, objetos, otros arrays) lo que lo hace muy versátil para la programación. Sus características principales son:
+
+* **Indexados por posición**: Empiezan desde 0.
+* **Tamaño dinámico**: Va cambiando el tamaño de forma dinámica, se pueden agregar o eliminar elementos en cualquier momento.
+* **Heterogéneos**: Se pueden mezclar tipos.
+
+```js
+// forma 1 de crearlo
+const frutas = ["manzana", "banana", "platano"];
+
+// forma 2 de crearlo
+const numeros = new Array(1,2,3,4,5);
+
+// ver el elemento en la posicion dada
+console.log(frutas[0]);
+// sin el corchete con el 0 se ve todo el array
+
+// cambiar un elemento
+frutas[1] = "mango";
+```
+
+## Métodos principales de Arrays
+
+Con estos métodos podemos hacer operaciones de forma automática
+
+* **`push()` / `pop()`**: Agregar o eliminar un elemento al final del array respectivamente.
+* **`shift()` / `unshift()`**: Eliminar el primer elemento o agregar uno o más al comienzo respectivamente.
+* **`slice(n1, n2)`**: Sirve para devolver una copia de una sección del Array. El primer elemento se incluye, pero el último elemento se excluye.
+* **`splice(n1, n2)`**: Cambia el contenido de un Array eliminando, reemplazando o agregando nuevos elementos. Comienza en el n1 y va hacia n2.
+* **`forEach()`**: Ejecutar instrucciones para cada elemento del array.
+* **`map()`**: Sirve para crear un nuevo Array con el resultado de la llamada a una función para cada elemento del Array.
+* **`filter()`**: Crear un nuevo Array pero solo con los elementos que cumplan la condición.
+
+```js
+const items = ["Manzana", "Banana"];
+
+item.push("Naranja");
+
+console.log("Después del push: ", items);
+
+// se refleja como se añade al final
+
+const elementoEliminado = items.pop();
+
+console.log("Después del pop: ", items);
+console.log("Elemento eliminado: ", elementoEliminado);
+
+// se refleja que se elimino el ultimo, te devuelve el elemento eliminado
+
+const primerElemento = items.shift();
+
+console.log("Después del shift: ", items);
+console.log("Elemento del comienzo eliminado: ", primerElemento);
+
+// se refleja q se elimino el primer elemento
+
+items.unshift("Fresa", "limón");
+
+console.log("Después del unshift: ", items);
+
+// se reflejan los nuevos al comienzo
+
+const items2 = ["a", "b", "c", "d", "e"];
+const subArray = items.slice(1, 4);
+
+console.log("Después del slice: ", subArray);
+
+// Se imprime los elementos seleccionados del slice. El elemento 1 se incluye, pero el 4 se EXCLUYE.
+
+items2.splice(2, 1, "x", "y");
+
+console.log("Después del splice: ", items2);
+
+// machaca del 2 cargandose la c, y añade el x e y
+
+items2.forEach((item, index) => {
+    console.log("Elemento en posicion ", index, " es ", item);
+})
+
+// recorre la lista sin usar for
+
+const mayusculas = items2.map(item => item.toUpperCase());
+
+console.log("Después del map: ", mayusculas);
+
+// nos pasa el array todo en mayusculas
+
+const filtrados = items2.filter(item => item > 'c');
+console.log("Después del filter: ", filtrados);
+
+// solo pone la d y la e en consola
+```

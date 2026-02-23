@@ -633,3 +633,44 @@ class ContadorSesiones {
 
     }
 }
+
+// Gestor de libros con id, titulo, autor y año de publicacion. Buscar, eliminar, mostrar y actualizar
+
+let biblioteca = [
+    {id: 1, titulo: "El señor de los anillos", autor: "J.R.R Tolkien", year: 1954},
+    {id: 2, titulo: "El principito", autor: "Antoine", year: 2007}
+];
+
+function agregarLibros(titulo, autor, year) {
+    const nuevoLibro = {
+        id: biblioteca.length + 1,
+        titulo,
+        autor,
+        year
+    };
+
+    biblioteca.push(nuevoLibro);
+}
+
+function buscarLibrosPorAutor(autor) {
+    return biblioteca.filter(libro => libro.autor === autor);
+}
+
+function eliminarLibro(id) {
+    biblioteca = biblioteca.filter(libro => libro.id !== id);
+}
+
+function mostrarLibrosAntiguos() {
+    const librosAntiguos = biblioteca.filter(libro => libro.year < 2000);
+    librosAntiguos.forEach(libro => console.log(libro.titulo));
+}
+
+function actualizarYear(id, newYear) {
+    libro = biblioteca.filter(libro => libro.id === id);
+
+    if (libro) {
+        libro.year = newYear;
+    } else {
+        console.log("No se pudo encontrar el libro");
+    }
+}
