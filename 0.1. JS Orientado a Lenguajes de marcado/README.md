@@ -22,7 +22,7 @@ Aquí encontrarás todas las unidades de JS orientada a lenguaje de marcados est
 | 📁 Carpeta | 📝 Contenido | 📊 Estado |
 | :--- | :--- | :---: |
 | [`0. Repaso`](./0.%20Repaso/) | Introducción a JS: variables, operadores, control de flujo, , trycatchfinally, funciones... | ✅ |
-| [`1. `]() | | ⏳ En progreso |
+| [`1. JS en la modificación de páginas web`](./1.%20JS%20en%20la%20modificación%20de%20páginas%20web/) | Usar JS para modificar páginas web | ⏳ En progreso |
 
 ## 🚀 Empieza por aquí
 

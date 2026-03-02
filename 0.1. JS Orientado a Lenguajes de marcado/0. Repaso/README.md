@@ -291,7 +291,7 @@ const saludar = () => console.log("Hola caraqlo");
 
 ---
 
-# 🕴🏻 Recursividad
+## 🕴🏻 Recursividad
 
 Cuando hablamos de **recursividad** nos referimos a una función que es capaz de **llamarse a sí misma** para resolver un determinado problema. 
 
