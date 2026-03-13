@@ -7,7 +7,7 @@ const addToCartButtons = document.querySelectorAll('.addToCartBtn');
 
 //mostrar u ocultar los detalles del producto destacado
 showDetailsBtn.onclick = function() {
-    if (productDetails.style.display === 'none') {
+    if (productDetails.style.display !== 'block') {
         productDetails.style.display = 'block';
         showDetailsBtn.textContent = 'Ocultar Detalles';
     } else {
