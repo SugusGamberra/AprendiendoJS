@@ -24,6 +24,9 @@ Aquí encontrarás todas las unidades de JS orientada a lenguaje de marcados est
 | [`0. Repaso`](./0.%20Repaso/) | Introducción a JS: variables, operadores, control de flujo, , trycatchfinally, funciones... | ✅ |
 | [`1. JS en la modificación de páginas web`](./1.%20JS%20en%20la%20modificación%20de%20páginas%20web/) | Usar JS para modificar páginas web | ✅ |
 | [`2. Query`](./2.%20Query/) | Práctica con `QuerySelector` | ✅ |
+| [`3. Manipular datos, clases y atributos`](./3.%20Manipular%20datos,%20clases%20y%20atributos/) | Uso de `classList`  manipulación de atributos | ✅ |
+| [`4. Galería de arte digital`](./4.%20Galería%20de%20arte%20digital/) | Ejemplo práctico de todo lo que hemos dado | ✅ |
+| [`5. Modificar de forma dinámica las webs`](./5.%20Modificar%20de%20forma%20dinámica%20las%20webs/) | Modificación de atributos, elementos, estilos... de forma dinámica | ✅ |
 
 ## 🚀 Empieza por aquí
 
