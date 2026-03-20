@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Galería de Arte Digital</title>
+        <style>.detalles {display: none} .resaltar{border: 2px solid goldenrod}</style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="obra" data-artista="Artista 1">
+            <img src="1.jpeg" alt="Obra 1">
+            <button onclick="toggleDetalles(this)">Ver más detalles</button>
+            <div class="detalles">
+                <p><strong>Artista:</strong> Artista 1</p>
+                <p><strong>Descripción:</strong> Cuadro chachi 1.</p>
+            </div>
+        </div>
+        <div class="obra" data-artista="Artista 2">
+            <img src="2.jpg" alt="Obra 2">
+            <button onclick="toggleDetalles(this)">Ver más detalles</button>
+            <div class="detalles">
+                <p><strong>Artista:</strong> Artista 2</p>
+                <p><strong>Descripción:</strong> Cuadro chachi 2.</p>
+            </div>
+        </div>
+        <div class="obra" data-artista="Artista 1">
+            <img src="3.jpg" alt="Obra 3">
+            <button onclick="toggleDetalles(this)">Ver más detalles</button>
+            <div class="detalles">
+                <p><strong>Artista:</strong> Artista 1</p>
+                <p><strong>Descripción:</strong> Cuadro chachi 3.</p>
+            </div>
+        </div>
+
+        <script src="tema1 javascript.js"></script>
+    </body>
+</html>
