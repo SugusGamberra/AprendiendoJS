@@ -27,6 +27,7 @@ Aquí encontrarás todas las unidades de JS orientada a lenguaje de marcados est
 | [`3. Manipular datos, clases y atributos`](./3.%20Manipular%20datos,%20clases%20y%20atributos/) | Uso de `classList`  manipulación de atributos | ✅ |
 | [`4. Galería de arte digital`](./4.%20Galería%20de%20arte%20digital/) | Ejemplo práctico de todo lo que hemos dado | ✅ |
 | [`5. Modificar de forma dinámica las webs`](./5.%20Modificar%20de%20forma%20dinámica%20las%20webs/) | Modificación de atributos, elementos, estilos... de forma dinámica | ✅ |
+| [`6. Ejercicios de prácticas`](./6.%20Ejercicios%20de%20prácticas/) | Ejercicios de prácticas de todo lo dado hasta ahora | ✅ |
 
 ## 🚀 Empieza por aquí
 
